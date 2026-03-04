@@ -119,7 +119,8 @@ class HackNSlashDemo {
 
   _LoadControllers() {
     const ui = new entity.Entity();
-    ui.AddComponent(new ui_controller.UIController());
+    const controller = new ui_controller.UIController();
+    ui.AddComponent(controller);
     this._entityManager.Add(ui, 'ui');
   }
 
@@ -247,6 +248,8 @@ class HackNSlashDemo {
     this._entityManager.Add(sword);
 
     const girl = new entity.Entity();
+    const quest = new quest_component.QuestComponent();
+    quest._AddQuestToJournal({id: 'GETTING_STARTED', title: 'GETTING STARTED', text: 'Lets get started!!! The game is in development, well have news soon.'});
     girl.AddComponent(new gltf_component.AnimatedModelComponent({
         scene: this._scene,
         resourcePath: './FBX/GIRL/',
@@ -260,7 +263,7 @@ class HackNSlashDemo {
         grid: this._grid,
     }));
     girl.AddComponent(new player_input.PickableComponent());
-    girl.AddComponent(new quest_component.QuestComponent());
+    girl.AddComponent(quest);
     girl.SetPosition(new THREE.Vector3(30, 0, 0));
     this._entityManager.Add(girl);
 
@@ -284,7 +287,6 @@ class HackNSlashDemo {
     player.AddComponent(
         new spatial_grid_controller.SpatialGridController({grid: this._grid}));
     player.AddComponent(new attack_controller.AttackController({timing: 0.7}));
-    player.AddComponent(new quest_component.QuestComponent());
     
     this._entityManager.Add(player, 'player');
 
