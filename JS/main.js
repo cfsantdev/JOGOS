@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import {third_person_camera} from './third-person-camera.js';
-import {entity_manager} from './entity-manager.js';
+import {third_person_camera} from 'JS/third-person-camera.js';
+import {entity_manager} from 'JS/entity-manager.js';
 import {player_entity} from './player-entity.js'
 import {entity} from './entity.js';
 import {gltf_component} from './gltf-component.js';
