@@ -1,5 +1,5 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.118.1/build/three.module.js';
-import {third_person_camera} from 'JS/third-person-camera.js';
+import {third_person_camera} from './third-person-camera.js';
 import {entity_manager} from 'JS/entity-manager.js';
 import {player_entity} from 'JS/player-entity.js'
 import {entity} from 'JS/entity.js';
