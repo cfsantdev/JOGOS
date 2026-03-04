@@ -1,10 +1,10 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.118.1/build/three.module.js';
 import {FBXLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/FBXLoader.js';
 
-import {finite_state_machine} from 'JS/finite-state-machine.js';
-import {entity} from 'JS/entity.js';
-import {player_entity} from 'JS/player-entity.js'
-import {player_state} from 'JS/player-state.js';
+import {finite_state_machine} from './finite-state-machine.js';
+import {entity} from './entity.js';
+import {player_entity} from './player-entity.js'
+import {player_state} from './player-state.js';
 
 export const npc_entity = (() => {
   class AIInput {
