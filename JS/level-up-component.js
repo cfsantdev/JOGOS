@@ -28,7 +28,7 @@ export const level_up_component = (() => {
       this._particles = new particle_system.ParticleSystem({
           camera: params.camera,
           parent: params.scene,
-          texture: './resources/textures/ball.png',
+          texture: '../PNG/TEXTURES/ball.png',
       });
       this._particles._alphaSpline.AddPoint(0.0, 0.0);
       this._particles._alphaSpline.AddPoint(0.1, 1.0);
