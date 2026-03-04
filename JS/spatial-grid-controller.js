@@ -1,4 +1,4 @@
-import {entity} from 'JS/entity.js';
+import {entity} from './entity.js';
 
 export const spatial_grid_controller = (() => {
 
