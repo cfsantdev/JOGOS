@@ -1,4 +1,4 @@
-import {entity} from "JS/entity.js";
+import {entity} from "./entity.js";
 
 export const health_component = (() => {
   class HealthComponent extends entity.Component {
