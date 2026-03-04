@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GENGINE - Game Engine</title>
     
-    <link rel="icon" type="image/png" href="gengine.png">
+    <link rel="icon" type="image/png" href="ICO/gengine.ico">
 
     <style>
         /* Estilos Globais e Reset */
