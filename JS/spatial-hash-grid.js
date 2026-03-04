@@ -1,4 +1,4 @@
-import {math} from 'JS/math.js';
+import {math} from './math.js';
 
 export const spatial_hash_grid = (() => {
   class SpatialHashGrid {
