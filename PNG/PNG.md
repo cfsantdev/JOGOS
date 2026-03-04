@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GENGINE - Game Engine Modelo</title>
+    <title>GENGINE - Game Engine</title>
     
     <link rel="icon" type="image/png" href="gengine.png">
 
