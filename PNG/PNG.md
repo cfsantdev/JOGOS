@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GENGINE - Game Engine Modelo</title>
     
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="gengine.png">
 
     <style>
         /* Estilos Globais e Reset */
@@ -84,7 +84,7 @@
 <body>
 
     <div class="splash-container">
-        <img src="favicon.png" alt="GENGINE Logo" class="gengine-icon">
+        <img src="gengine.png" alt="GENGINE Logo" class="gengine-icon">
         
         <h1 class="gengine-title">GENGINE</h1>
         
