@@ -79,7 +79,7 @@ export const npc_entity = (() => {
 
     _LoadModels() {
       const loader = new FBXLoader();
-      loader.setPath('../FBX/MONSTERS/');
+      loader.setPath('./FBX/MONSTERS/');
       loader.load(this._params.resourceName, (glb) => {
         this._target = glb;
         this._params.scene.add(this._target);
