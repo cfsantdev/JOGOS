@@ -284,6 +284,8 @@ class HackNSlashDemo {
     player.AddComponent(
         new spatial_grid_controller.SpatialGridController({grid: this._grid}));
     player.AddComponent(new attack_controller.AttackController({timing: 0.7}));
+    player.AddComponent(new quest_component.QuestComponent());
+    
     this._entityManager.Add(player, 'player');
 
     player.Broadcast({
