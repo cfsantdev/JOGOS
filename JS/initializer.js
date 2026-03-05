@@ -15,6 +15,9 @@ import {
     inventory_controller
 } from './inventory-controller.js';
 import {
+    third_person_camera
+} from './third-person-camera.js';
+import {
     quest_component
 } from './quest-component.js';
 import {
