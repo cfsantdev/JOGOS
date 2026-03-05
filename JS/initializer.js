@@ -338,7 +338,7 @@ export const initializer = (() => {
 
     _InitializeMobs(num){
         console.log("Initialize Mobs...(14/17)");
-        const mobs = new monsters();
+        const mobs = monsters();
         for (let i = 0; i < num; ++i) {
             const mobInfo = mobs[math.rand_int(0, mobs.length - 1)];
       
