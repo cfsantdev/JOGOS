@@ -234,8 +234,20 @@ export const initializer = (() => {
             },
         }));
 
+        let bow = new entity.Entity();
+        bow.AddComponent(new inventory_controller.InventoryItem({
+            type: 'weapon',
+            damage: 3,
+            renderParams: {
+              name: 'Bow_Wooden',
+              scale: 0.25,
+              icon: 'bow-arrow-64.png',
+            },
+        }));
+
         this._entityManager.Add(axe);
         this._entityManager.Add(sword);
+        this._entityManager.Add(bow);
 
         player.Broadcast({
             topic: 'inventory.add',
@@ -246,6 +258,12 @@ export const initializer = (() => {
         player.Broadcast({
             topic: 'inventory.add',
             value: sword.Name,
+            added: false,
+        });
+
+        player.Broadcast({
+            topic: 'inventory.add',
+            value: bow.Name,
             added: false,
         });
     
