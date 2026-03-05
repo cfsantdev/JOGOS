@@ -24,6 +24,9 @@ import {
     spatial_grid_controller
 } from './spatial-grid-controller.js';
 import {
+    spatial_hash_grid
+} from './spatial-hash-grid.js'
+import {
     player_input
 } from './player-input.js';
 import {
