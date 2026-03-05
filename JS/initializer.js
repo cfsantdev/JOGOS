@@ -311,9 +311,6 @@ export const initializer = (() => {
         player.AddComponent(new player_entity.BasicCharacterController(params));
         player.AddComponent(new equip_weapon_component.EquipWeapon({anchor: 'RightHandIndex1'}));
         player.AddComponent(new inventory_controller.InventoryController(params));
-
-        this._InitializeInventory(player);
-        
         player.AddComponent(new health_component.HealthComponent({
             updateUI: true,
             health: 100,
@@ -330,6 +327,8 @@ export const initializer = (() => {
         player.AddComponent(new attack_controller.AttackController({timing: 0.7}));
         
         this._entityManager.Add(player, 'player');
+
+        this._InitializeInventory(player);
     
         this._InitializeThirdPersonCamera();
     }
