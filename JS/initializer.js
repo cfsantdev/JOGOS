@@ -217,7 +217,7 @@ export const initializer = (() => {
         this._entityManager.Add(levelUpEntity, 'level-up-spawner');
     }
 
-    _InitializeInventory(){
+    _InitializeInventory(player){
         console.log("Initialize Inventory...(10/17)");
         let axe = new entity.Entity();
         axe.AddComponent(new inventory_controller.InventoryItem({
@@ -243,6 +243,24 @@ export const initializer = (() => {
 
         this._entityManager.Add(axe);
         this._entityManager.Add(sword);
+
+        player.Broadcast({
+            topic: 'inventory.add',
+            value: axe.Name,
+            added: false,
+        });
+    
+        player.Broadcast({
+            topic: 'inventory.add',
+            value: sword.Name,
+            added: false,
+        });
+    
+        player.Broadcast({
+            topic: 'inventory.equip',
+            value: sword.Name,
+            added: false,
+        });
     }
 
     _InitializeNPC(){
@@ -287,14 +305,15 @@ export const initializer = (() => {
           camera: this._camera,
           scene: this._scene,
         };
-
-        this._InitializeInventory();
-    
+        
         let player = new entity.Entity();
         player.AddComponent(new player_input.BasicCharacterControllerInput(params));
         player.AddComponent(new player_entity.BasicCharacterController(params));
         player.AddComponent(new equip_weapon_component.EquipWeapon({anchor: 'RightHandIndex1'}));
         player.AddComponent(new inventory_controller.InventoryController(params));
+
+        this._InitializeInventory(player);
+        
         player.AddComponent(new health_component.HealthComponent({
             updateUI: true,
             health: 100,
@@ -311,24 +330,6 @@ export const initializer = (() => {
         player.AddComponent(new attack_controller.AttackController({timing: 0.7}));
         
         this._entityManager.Add(player, 'player');
-    
-        player.Broadcast({
-            topic: 'inventory.add',
-            value: axe.Name,
-            added: false,
-        });
-    
-        player.Broadcast({
-            topic: 'inventory.add',
-            value: sword.Name,
-            added: false,
-        });
-    
-        player.Broadcast({
-            topic: 'inventory.equip',
-            value: sword.Name,
-            added: false,
-        });
     
         this._InitializeThirdPersonCamera();
     }
